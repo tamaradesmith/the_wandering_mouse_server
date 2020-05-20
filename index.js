@@ -9,12 +9,14 @@ app.use(express.json());
 app.use(logger('dev'));
 app.use(cors());
 
+app.options('*', cors())
+
 const score = require('./routes/score');
 app.use('/scores', score);
 
 
 const PORT = 4040;
-const ADDRESS = '0.0.0.0';
+const ADDRESS = 'https://wandering-mouse-server.herokuapp.com/';
 
 
 app.listen(PORT, ADDRESS, () => {
