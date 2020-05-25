@@ -27,8 +27,9 @@ app.use(function (err, req, res, next) {
 })
 
 const PORT = process.env.PORT || 4040;
-const ADDRESS = 'https://wandering-mouse-server.herokuapp.com/';
+// const ADDRESS = 'https://wandering-mouse-server.herokuapp.com/';
 
-app.listen(PORT, ADDRESS, () => {
-  console.log(`Listening => port: ${PORT} Address: ${ADDRESS}`)
-});
+app.listen(PORT);
+  // , ADDRESS, () => {
+//   console.log(`Listening => port: ${PORT} Address: ${ADDRESS}`)
+// });
