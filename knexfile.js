@@ -38,26 +38,14 @@ module.exports = {
 
   production: {
     client: 'pg',
-    connection: process.env.DATABASE_URL + `?ssl=false`,
+    connection: process.env.DATABASE_URL,
     migrations: {
-      directory: './db/migrations'
+      directory: __dirname + '/db/migrations',
     },
-    useNullAsDefault: true
-  }
-  // production: {
-  //   client: 'postgresql',
-  //   connection: {
-  //     database: 'postgresql-colorful-64905',
-  //     user: 'tamara',
-  //     password: 'tamara'
-  //   },
-  //   pool: {
-  //     min: 2,
-  //     max: 10
-  //   },
-  //   migrations: {
-  //     directory: 'db/migrations',
-  //   }
-  // }
+    seeds: {
+      directory: __dirname + '/db/seeds/production',
+    },
+  },
+
 
 };

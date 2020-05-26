@@ -6,3 +6,6 @@ const client = knex(dbConfig.production)
 
 
 module.exports = client;
+
+
+
