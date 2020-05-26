@@ -4,13 +4,6 @@ const cors = require('cors');
 
 const app = express();
 
-// const { Pool } = require('pg');
-// const pool = new Pool({
-//   connectionString: process.env.DATABASE_URL,
-//   ssl: {
-//     rejectUnauthorized: false
-//   }
-// });
 
 const environment = process.env.NODE_ENV || 'development';
 
@@ -56,9 +49,9 @@ app.use(function (err, req, res, next) {
 
 
 const PORT = process.env.PORT || 4040;
-// const ADDRESS = 'https://wandering-mouse-server.herokuapp.com/';
+const ADDRESS = process.env.PORT || 3000;
 
-app.listen(PORT);
+app.listen(PORT, ADDRESS);
   // , ADDRESS, () => {
 //   console.log(`Listening => port: ${PORT} Address: ${ADDRESS}`)
 // });
