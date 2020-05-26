@@ -37,8 +37,7 @@ module.exports = {
   production: {
     client: 'postgresql',
     connection: {
-      database: DATABASE_URL,
-
+      database: 'postgresql-colorful-64905',
       user: 'tamara',
       password: 'tamara'
     },
