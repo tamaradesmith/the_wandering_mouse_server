@@ -4,15 +4,15 @@ const cors = require('cors');
 
 const app = express();
 
-const { Pool } = require('pg');
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false
-  }
-});
+// const { Pool } = require('pg');
+// const pool = new Pool({
+//   connectionString: process.env.DATABASE_URL,
+//   ssl: {
+//     rejectUnauthorized: false
+//   }
+// });
 
-
+const environment = process.env.NODE_ENV || 'development';
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());

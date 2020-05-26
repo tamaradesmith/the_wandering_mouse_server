@@ -34,20 +34,30 @@ module.exports = {
     }
   },
 
+
+
   production: {
-    client: 'postgresql',
-    connection: {
-      database: 'postgresql-colorful-64905',
-      user: 'tamara',
-      password: 'tamara'
-    },
-    pool: {
-      min: 2,
-      max: 10
-    },
+    client: 'pg',
+    connection: process.env.DATABASE_URL + `?ssl=true`,
     migrations: {
-      directory: 'db/migrations',
-    }
+      directory: './db/migrations'
+    },
+    useNullAsDefault: true
   }
+  // production: {
+  //   client: 'postgresql',
+  //   connection: {
+  //     database: 'postgresql-colorful-64905',
+  //     user: 'tamara',
+  //     password: 'tamara'
+  //   },
+  //   pool: {
+  //     min: 2,
+  //     max: 10
+  //   },
+  //   migrations: {
+  //     directory: 'db/migrations',
+  //   }
+  // }
 
 };
