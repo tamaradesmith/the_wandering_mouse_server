@@ -49,9 +49,9 @@ app.use(function (err, req, res, next) {
 
 
 const PORT = process.env.PORT || 4040;
-const ADDRESS = process.env.PORT || 3000;
+// const ADDRESS = process.env.PORT || 3000;
 
-app.listen(PORT, ADDRESS);
+app.listen(PORT);
   // , ADDRESS, () => {
 //   console.log(`Listening => port: ${PORT} Address: ${ADDRESS}`)
 // });
